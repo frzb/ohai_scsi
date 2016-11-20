@@ -19,7 +19,19 @@ Output looks like that:
   },
   "hosts": {
     "0": {
-      "type": "ata_piix"
+      "type": "ata_piix",
+      "dir": "/sys/class/scsi_host//host0",
+      "device_dir": "/sys/devices/pci0000:00/0000:00:01.1/ata1/host0"
+    },
+    "1": {
+      "type": "ata_piix",
+      "dir": "/sys/class/scsi_host//host1",
+      "device_dir": "/sys/devices/pci0000:00/0000:00:01.1/ata2/host1"
+    },
+    "2": {
+      "type": "ahci",
+      "dir": "/sys/class/scsi_host//host2",
+      "device_dir": "/sys/devices/pci0000:00/0000:00:0d.0/ata3/host2"
     }
   }
 }

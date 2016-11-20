@@ -48,9 +48,9 @@ Ohai.plugin(:Scsi) do
         id = Regexp.last_match(1)
         scsi[:hosts][id]              = Mash.new
         scsi[:hosts][id][:type]       = Regexp.last_match(2)
-        /.*dir:\s+(\S+)/ =~ lsscsi_scsi[:hosts][index + 1]
+        /.*dir:\s+(\S+)/ =~ lsscsi_hosts[index + 1]
         scsi[:hosts][id][:dir]        = Regexp.last_match(1)
-        /.*device\s+dir:\s+(\S+)/ =~ lsscsi_scsi[:hosts][index + 2]
+        /.*device\s+dir:\s+(\S+)/ =~ lsscsi_hosts[index + 2]
         scsi[:hosts][id][:device_dir] = Regexp.last_match(1)
       end
     else
