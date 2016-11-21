@@ -4,6 +4,8 @@ driver:
 
 provisioner:
   name: chef_zero
+  client_rb:
+    'ohai.plugin_path <<': '/tmp/kitchen/ohai/plugins'
 
 verifier:
   name: inspec
